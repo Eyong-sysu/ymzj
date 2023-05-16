@@ -193,7 +193,7 @@
 //----------------------------获取版本
 /**
  * 获取远程版本
- * https://raw.githubusercontent.com/zhaoshicong/QLScriptPublic/main/demo/${name}.js   注意demo为演示
+ * https://raw.githubusercontent.com/3488790026/ymzj/main/sztc.js   注意demo为演示
  */
 function Version_Check(name) {
 	return new Promise((resolve) => {
