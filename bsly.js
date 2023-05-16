@@ -407,7 +407,7 @@ function modify() {
 function getVersion(timeout = 3 * 1000) {
     return new Promise((resolve) => {
         let url = {
-            url: `https://ghproxy.com/https://raw.githubusercontent.com/qq274023/lekebo/master/lekebo_bsly.js`,
+            url: `https://ghproxy.com/https://github.com/3488790026/ymzj.js`,
         }
         $.get(url, async (err, resp, data) => {
             try {
