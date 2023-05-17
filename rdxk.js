@@ -7,7 +7,7 @@
 
 
 //===============脚本版本=================//
-let scriptVersion = "1.0.1";
+let scriptVersion = "1.0.2";
 let update_data = "完成签到,提现";
 //=======================================//
 const $ = new Env('热度星客');
@@ -80,7 +80,7 @@ function getMemberInfo(timeout = 2000) {
             headers: {
                 'Host': host,
                 'Content-Type': 'application/json',
-				'authori-zation': 'Bearer ' + ck[0],
+				'authori-zation': 'Bearer'+ck[0],
                 'version': '10242',
                 'User-Agent': getUA(),
             },
@@ -116,7 +116,7 @@ function sign(timeout = 2000) {
                 'Host': host,
 				'Content-Type': 'application/json',
                 'Form-type': 'app',
-				'Authori-zation': 'Bearer ' + ck[0],
+				'Authori-zation': 'Bearer'+ck[0],
                 'User-Agent': getUA(),
                 'version': '10095',
                 'Referer': 'https://servicewechat.com/wx9e9a49f5659aa37b/3/page-frame.html',
@@ -149,7 +149,7 @@ function withdraw(timeout = 2000) {
             url: `${hostname}/api/user/applyExtract`,
             headers: {
                 'Host': host,
-				'authori-zation': 'Bearer ' + ck[0],
+				'authori-zation': 'Bearer'+ck[0],
                 'User-Agent': getUA(),
             },
             body: `{"brokerage":"${txje}","pwd":"274023","extract_type":"alipay"}`,
