@@ -7,7 +7,7 @@
  */
 
 //===============脚本版本=================//
-let scriptVersion = "1.0.1";
+let scriptVersion = "1.0.2";
 let update_data = "完成签到，抽奖";
 //=======================================//
 const $ = new Env('百事乐元');
@@ -186,46 +186,10 @@ function signIn(timeout = 2000) {
  * @param timeout
  * @returns {Promise<unknown>}
  */
-function 抽奖(timeout = 0) {
+function choujiang(timeout = 0) {
     return new Promise((resolve) => {
         let url = {
-            url: `${hostname} /**
- * 签到
- * @param timeout
- * @returns {Promise<unknown>}
- */
-function signIn(timeout = 2000) {
-    return new Promise((resolve) => {
-        let url = {
-            url: `${hostname}/api/wxapp/doSignIn`,
-            headers: {
-                Host: host,
-                'Connection': 'keep-alive',
-                'Content-Type': 'application/json',
-                'User-Agent': getUA(),
-                'Referer': 'https://servicewechat.com/wx1a72addb7ee74f67/102/page-frame.html',
-                'Accept-Encoding': 'gzip, deflate',
-                'Content-Length': '88',
-            },
-            body: `{"token":"${ck[0]}","ticket":""}`,
-        }
-        $.post(url, async (error, response, data) => {
-            try {
-                let result = JSON.parse(data);
-                if (result.code == 0) {
-                    DoubleLog(`\n 签到成功: ✅ ，${result.message} 获取 5 积分`)
-                } else {
-                    DoubleLog(`\n 签到失败: ❌ ，原因是：${result.message}`)
-                }
-            } catch (e) {
-                DoubleLog(`\n 信息异常: ❌ ，${response}`)
-            } finally {
-                resolve();
-            }
-        }, timeout)
-    })
-}
-`,
+            url: `${hostname}/api/wxapp/doLottery`,
             headers: {
                 Host: host,
                 'Connection': 'keep-alive',
