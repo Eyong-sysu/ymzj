@@ -104,10 +104,7 @@
          await like($.acticleList[j].id)
          await $.wait(1500)
        }
-       break;
-     default:
-       console.log(`${task.name}暂未上线,请反馈作者`);
-   }
+          }
  }
  /**
   * 
