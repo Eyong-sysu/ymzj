@@ -3,22 +3,17 @@
  * 项目类型：微信小程序
  * 项目名称：百事乐元
  * 项目抓包：抓pepcoinnew.pepcoinbypepsico.com.cn下的token填入变量
- * 项目变量：lekebo_bsly_Cookie
- * 项目定时：每40分钟运行一次
- * cron: 18 7 * * *
- * github仓库：https://github.com/
- * 
- * 交流Q群：104062430 作者:乐客播 欢迎前来提交bug
+ * 项目变量：bsly
  */
 
 //===============脚本版本=================//
-let scriptVersion = "1.0.1";
-let update_data = "完成签到，浏览视频，二手市场，校园头条任务";
+let scriptVersion = "1.0.2";
+let update_data = "完成签到，抽奖";
 //=======================================//
 const $ = new Env('百事乐元');
 const notify = $.isNode() ? require('./sendNotify') : '';
 const Notify = 1 		//0为关闭通知,1为打开通知,默认为1
-let UserCookie = ($.isNode() ? process.env.lekebo_bsly_Cookie : $.getdata('lekebo_bsly_Cookie')) || '';
+let UserCookie = ($.isNode() ? process.env.bsly : $.getdata('bsly')) || '';
 let UserCookieArr = [];
 const {log} = console;
 let data = '';
@@ -34,7 +29,7 @@ let hostname = 'https://' + host;
         if (!(await Envs())){
             return;
         } else {
-            DoubleLog(`\n 交流Q群：104062430 作者:乐客播 欢迎前来提交bug`)
+            DoubleLog(`\n 此脚本仅供交流学习`)
             await getVersion();
             DoubleLog(`\n================ 共找到 ${UserCookieArr.length} 个账号 ================ \n 脚本执行✌北京时间(UTC+8)：${new Date(new Date().getTime() + new Date().getTimezoneOffset() * 60 * 1000 + 8 * 60 * 60 * 1000).toLocaleString()} \n================ 版本对比检查更新 ================`);          
             if (scriptVersionLatest != scriptVersion) {
@@ -266,7 +261,7 @@ async function Envs() {
             UserCookieArr.push(UserCookie);
         }
     } else {
-        console.log(`\n 乐客播提示：系统变量未填写 lekebo_bsly_Cookie`)
+        console.log(`\n 系统提示：系统变量未填写 bsly`)
         return;
     }
     return true;
@@ -376,7 +371,7 @@ function modify() {
 function getVersion(timeout = 3 * 1000) {
     return new Promise((resolve) => {
         let url = {
-            url: `https://ghproxy.com/https://raw.githubusercontent.com/qq274023/lekebo/master/lekebo_kww.js`,
+            url: `https://ghproxy.com/https://raw.githubusercontent.com/3488790026/ymzj/main/bsly.js`,
         }
         $.get(url, async (err, resp, data) => {
             try {
