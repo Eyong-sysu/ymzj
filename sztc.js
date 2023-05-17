@@ -10,7 +10,7 @@
 let scriptVersion = "1.0.1";
 let update_data = "完成签到";
 //=======================================//
-const $ = new Env('热度星客');
+const $ = new Env('深圳体彩');
 const notify = $.isNode() ? require('./sendNotify') : '';
 const Notify = 1 		//0为关闭通知,1为打开通知,默认为1
 const {log} = console;
