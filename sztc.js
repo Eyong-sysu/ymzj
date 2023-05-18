@@ -64,8 +64,6 @@ async function start() {
     await $.wait(2000);
     await sign(2 * 1000);
     await $.wait(2000);
-    await withdraw(2 * 1000);
-    await $.wait(2000);
     return true;
 }
 /**
@@ -124,7 +122,7 @@ function sign(timeout = 2000) {
             try {
                 let result = JSON.parse(data);
                 if (result.code == 1) {
-                    DoubleLog(`\n 签到成功: ✅ ，${result.data`)
+                    DoubleLog(`\n 签到成功: ✅ ，${result?.data}`)
                 } else {
                     DoubleLog(`\n 签到失败: ❌ ，原因是：${result.msg}`)
                 }
