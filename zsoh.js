@@ -1,5 +1,5 @@
 /*
- APP：笛扬
+ APP：掌上瓯海
  功能：完成任务，获得积分
  抓包：https://vapp.tmuyun.com/ 任意-请求头中X-SESSION-ID和X-ACCOUNT-ID
  定时一天一次
