@@ -8,7 +8,7 @@
  const notify = $.isNode() ? require('./sendNotify') : '';
  const CryptoJS = require("crypto-js");
  const salt = "FR*r!isE5W";
- const appid = 68;
+ const appid = 78;
  let cookiesArr = [],
    message = "",
 
