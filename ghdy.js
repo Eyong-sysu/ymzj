@@ -13,7 +13,7 @@
    message = "",
 
 
-   channelId = ["643faff1e305b47056547555", "643fafe2e305b47056547554", "643fb00de305b47056547556", "643fb0dde305b4705654755a", "643fb120e305b4705654755b", "643fb17ae305b4705654755e"]
+   channelId = ["62ab100eb40eef41000f4401", "6459f4c779f6be138e5dc585", "6256878dad61a47ce367836d", "6254f12dfe3fc10794f7b25c"]
  cookie = ($.isNode() ? process.env.ghdy : $.getdata("ghdy")) || ``
  helpAu = ($.isNode() ? process.env.zsohhelpAu : $.getdata("zsohhelpAu")) || true
  !(async () => {
